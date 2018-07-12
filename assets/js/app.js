@@ -33,7 +33,7 @@ $(document).ready(function() {
 		var snap = childSnapshot.val();
 		console.log(snap)
 		var current = new Date();
-		var totalMinutes = (current.getHours() * 60) + time.getMinutes();
+		var totalMinutes = (current.getHours() * 60) + current.getMinutes();
 		
 
 		$("#trainName").val("");
