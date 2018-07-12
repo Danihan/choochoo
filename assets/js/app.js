@@ -47,8 +47,6 @@ $(document).ready(function() {
 		var nextTrainMinutes = ((totalMinutes + wait) % 60);
 		var nextTrain = nextTrainHours + ":" + nextTrainMinutes;
 
-		var timeSinceStartTime = Math.abs(currentTime - startTime);
-
 		var newTrainRow = $("<tr>")
 		var tdTrainName = $("<td>").text(snap.trainName);
 		var tdDest = $("<td>").text(snap.dest);
