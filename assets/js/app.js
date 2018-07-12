@@ -31,7 +31,7 @@ $(document).ready(function() {
 
 	database.ref().on("child_added", function(childSnapshot){
 		var snap = childSnapshot.val();
-		console.log(snap)
+		//console.log(snap)
 		var current = new Date();
 		var totalMinutes = (current.getHours() * 60) + current.getMinutes();
 		
@@ -44,8 +44,9 @@ $(document).ready(function() {
 		var calc = 15;
 		var wait = totalMinutes % freq;
 		var nextTrainHours = Math.floor((totalMinutes + wait) / 60);
-		var nextTrainMinutes = ((totalMinutes + wait) % 60);
-		var nextTrain = nextTrainHours + ":" + nextTrainMinutes;
+		console.log(nextTrainHours);
+		var nextTrainMinutes = parseInt((totalMinutes + wait) % 60);
+		var nextTrain = parseInt(nextTrainHours) + ":" + parseInt(nextTrainMinutes);
 
 		var newTrainRow = $("<tr>")
 		var tdTrainName = $("<td>").text(snap.trainName);
